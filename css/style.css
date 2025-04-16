@@ -70,7 +70,7 @@ nav a:hover {
 }
 
 .parallax {
-    background-image: url(assets/imgs/bg_parallax.jpg);
+    background-image: url(../assets/imgs/bg/bg_parallax.jpg);
     width: 100vw;
     height: 80vh;
     background-repeat: no-repeat;
