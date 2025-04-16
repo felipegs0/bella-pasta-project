@@ -19,25 +19,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Cabeçalho -->
     <header>
-        <div id="header">
-            <img src="assets/imgs/logo_bp.png" alt="logo-Bella-Pasta" class="logo">
+        <div>
+            <a href="#home" class="logo-link">
+                <img src="assets/imgs/logo_bp.png" alt="logo-Bella-Pasta" class="logo">
+            </a>
         </div>
-        <nav>
-            <p class="">Home</p>
-            <p class="">Sobre</p>
-            <p class="">Menu</p>
-            <p class="">Galeria</p>
-            <p class="bt-reservar">Reservar</p>
+
+        <nav aria-label="Menu principal">
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#reserva" class="bt-reservar">Reservar</a></li>
+            </ul>
         </nav>
     </header>
+    
     <main>
         <section class="parallax">
             <section class="parallax-main">
                 <div id="img-main-parallax">
-                    <img src="assets/imgs/logo_bp_complete.png" alt="" class="logo-main">
-                </div>
-                <div></div>
+                <img src="assets/imgs/logo_bp_complete.png" alt="" class="logo-main">
+             </div>
             </section>
         </section>
     </main>
