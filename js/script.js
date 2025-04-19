@@ -7,3 +7,11 @@ window.addEventListener("scroll", () => {
         header.classList.remove("ocult")
     }
 })
+
+const btEnt = document.getElementById("btEnt")
+const btPas = document.getElementById("btEnt")
+const btSob = document.getElementById("btSob")
+
+btEnt.addEventListener("click", () => {
+    
+})
