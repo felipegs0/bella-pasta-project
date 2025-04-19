@@ -197,18 +197,41 @@ main {
     font-size: 1.1em;
 }
 
-#description-text img {
+#description-img-chef {
+    gap: 1rem;
+    display: inline-flex;
+}
+
+#description-img-chef img {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    display: inline-block;
 }
 
-#description-chef {
-    display: flex;
-    gap: 1rem;
+#description-about-chef {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
 }
 
+#description-about-chef p {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+#description-about-chef .name-chef {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(141 75 44);
+}
+
+#description-about-chef .about-chef {
+    color: rgba(0, 0, 0, 0.589);
+    font-size: 14px;
+}
 
 /*
 Fontes:
