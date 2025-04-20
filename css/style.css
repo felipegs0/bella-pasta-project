@@ -235,8 +235,8 @@ main {
 
 #menu {
     width: 100vw;
-    height: 75vh;
-    background-color: rgb(248, 229, 199);
+    height: 100vh;
+    background-color: #ffd5bb;
 }
 
 #menu-title {
@@ -271,6 +271,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 #buttons button {
@@ -292,8 +293,41 @@ main {
 
  
 #buttons button.btActivate {
-    background-color: #961717;
+    background-color: rgb(150, 23, 23);
     color: white;
+}
+
+#content-menu {
+    display: flex;
+    justify-content: center;
+}
+
+#ent-content, #pas-content, #sob-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 60vw;
+}
+
+.meat {
+    width: 25vw;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.178);
+}
+
+.meat h2 {
+    font-family: 'Cormorant Garamond';
+    margin-bottom: 6px;
+    font-size: 20px;
+    color: rgb(141 75 44);
+}
+
+.meat p {
+    font-family: 'Montserrat';
+    font-size: 12px;
 }
 
 /*
