@@ -9,9 +9,26 @@ window.addEventListener("scroll", () => {
 })
 
 const btEnt = document.getElementById("btEnt")
-const btPas = document.getElementById("btEnt")
+const btPas = document.getElementById("btPas")
 const btSob = document.getElementById("btSob")
 
-btEnt.addEventListener("click", () => {
-    
-})
+function showMenu(btClicked) {
+
+    changeColor(btClicked)
+}
+
+function changeColor(btClicked) {
+    if (btClicked == 'ent') {
+        btEnt.classList.add("btActivate")
+        btPas.classList.remove("btActivate")
+        btSob.classList.remove("btActivate")
+    } else if (btClicked == 'pas') {
+        btEnt.classList.remove("btActivate")
+        btPas.classList.add("btActivate")
+        btSob.classList.remove("btActivate")
+    } else {
+        btEnt.classList.remove("btActivate")
+        btPas.classList.remove("btActivate")
+        btSob.classList.add("btActivate")
+    }
+}

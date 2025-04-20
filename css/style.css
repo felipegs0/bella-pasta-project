@@ -290,6 +290,12 @@ main {
     background-color: rgb(141 75 44);
 }
 
+ 
+#buttons button.btActivate {
+    background-color: #961717;
+    color: white;
+}
+
 /*
 Fontes:
 'Playfair Display'
