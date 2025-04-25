@@ -16,36 +16,32 @@ const entContent = document.getElementById("ent-content")
 const pasContent = document.getElementById("pas-content")
 const sobContent = document.getElementById("sob-content")
 
-
-function showMenu(btClicked) {
-    if (btClicked == 'ent') {
+document.addEventListener('click', (e) => {
+    const el = e.target;
+    if (el.classList.contains('entrada')) {
         entContent.style.display = "flex";
         pasContent.style.display = "none";
         sobContent.style.display = "none";
-    } else if (btClicked == 'pas') {
-        entContent.style.display = "none";
-        pasContent.style.display = "flex";
-        sobContent.style.display = "none";
-    } else if (btClicked == 'sob') {
-        entContent.style.display = "none";
-        pasContent.style.display = "none";
-        sobContent.style.display = "flex";
-    }
-    changeColor(btClicked)
-}
 
-function changeColor(btClicked) {
-    if (btClicked == 'ent') {
         btEnt.classList.add("btActivate")
         btPas.classList.remove("btActivate")
         btSob.classList.remove("btActivate")
-    } else if (btClicked == 'pas') {
+
+    } else if (el.classList.contains('pasta')) {
+        entContent.style.display = "none";
+        pasContent.style.display = "flex";
+        sobContent.style.display = "none";
+
         btEnt.classList.remove("btActivate")
         btPas.classList.add("btActivate")
         btSob.classList.remove("btActivate")
-    } else if (btClicked == 'sob') {
+    } else if (el.classList.contains('sobremesa')) {
+        entContent.style.display = "none";
+        pasContent.style.display = "none";
+        sobContent.style.display = "flex";
+
         btEnt.classList.remove("btActivate")
         btPas.classList.remove("btActivate")
         btSob.classList.add("btActivate")
     }
-}
+});
