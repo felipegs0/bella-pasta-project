@@ -408,3 +408,65 @@ main {
     width: 10vw;
     height: 2px;
 }
+
+#gallery-photos {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.card-photo {
+    width: 23vw;
+    height: 60vh;
+}
+
+.card-photo1, .card-photo2, .card-photo3 {
+    background-image: url(../assets/imgs/foods/Spaghetti-alla-Carbonara.jpg);
+    width: 440px;
+    height: 440px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.478);
+    
+}
+
+.card-photo2 {
+    background-image: url(../assets/imgs/foods/Gnocchi\ al\ Pesto\ Genovese.jpg);
+    background-position: center bottom;
+}
+
+.card-photo3 {
+    background-image: url(../assets/imgs/foods/Lasagna\ alla\ Napoletana.jpg);
+}
+
+.texto {
+    display: flex;
+    transform: translateY(-15px);
+    width: 440px;
+    overflow-y: hidden;
+    height: 440px;
+    opacity: 0;
+    transition: all 0.45s ease;
+    border-radius: 4px;
+    color: white;
+    font-family: 'montserrat';
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    text-decoration: underline;
+    
+}
+
+.texto:hover {
+    
+    opacity: 1;
+    transform: translateY(0px);
+    background-color: rgba(0, 0, 0, 0.726);
+    
+}
