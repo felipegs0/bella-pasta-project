@@ -416,24 +416,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    
+    gap: 13.5px;
 }
 
 .card-photo {
     width: 23vw;
     height: 60vh;
-}
-
-.card-photo1, .card-photo2, .card-photo3 {
-    width: 440px;
-    height: 440px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 25px;
-    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.478);
 }
 
 .texto {
@@ -451,13 +439,13 @@ main {
     justify-content: center;
     font-size: 1.5em;
     text-decoration: underline;
+    margin: 0 2rem;
 }
 
 .texto:hover {
     opacity: 1;
-    transform: translateY(-100%);
+    transform: translateY(-101%);
     background-color: rgba(0, 0, 0, 0.726);
-    
 }
 
 .slider {
@@ -468,6 +456,13 @@ main {
     display: flex;
 }
 
+.slide {
+    transition: all 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .slide img {
     object-fit: cover;
     width: 440px;
@@ -476,17 +471,7 @@ main {
     object-fit: cover;
     object-position: center bottom;
     margin: 0 2rem;
-}
-
-.right {
-    margin-right: 40px;
-}
-
-.slide {
-    transition: all 1s;
-    position: absolute;
-    top: 0;
-    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.478);
 }
 
 .btn {
@@ -494,4 +479,33 @@ main {
     padding: 2rem;
     color: #888;
     cursor: pointer;
+}
+
+.right {
+    position: relative;
+    right: 2%;
+}
+.left {
+    position: relative;
+    left: 1%;
+}
+
+.bruschetta img {
+    object-position: center;
+    object-fit: cover;
+}
+
+.lasagna img {
+    object-position: center;
+    object-fit: cover;
+}
+
+.prosciutto img {
+    object-position: center bottom;
+    object-fit: cover;
+}
+
+.panna img {
+    object-position: center;
+    object-fit: cover;
 }
