@@ -45,3 +45,41 @@ document.addEventListener('click', (e) => {
         btSob.classList.add("btActivate")
     }
 });
+
+const slides = document.querySelectorAll(".slide")
+const left = document.querySelector(".left")
+const right = document.querySelector(".right")
+
+let slide = 0;
+let maxSlide = slides.length;
+
+function goToSlide(slide) {
+    slides.forEach(
+        (e, i) => (e.style.transform = `translateX(${100 * (i - slide)}%`)
+    );
+};
+
+function nextSlide() {
+    if(slide === maxSlide - 3) {
+        slide = 0
+    } else {
+        slide++
+    }
+    goToSlide(slide)
+}
+
+function prevSlide() {
+    if(slide === 0) {
+        slide = maxSlide - 3;
+    } else {
+        slide--
+    }
+    goToSlide(slide)
+}
+
+window.addEventListener("load", () => {
+    goToSlide(slide);
+})
+
+left.addEventListener("click", prevSlide)
+right.addEventListener("click", nextSlide)

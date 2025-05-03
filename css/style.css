@@ -20,6 +20,7 @@ body {
     height: 100vh;
     background-color: var(--principal-backgroundColor);
     overflow-x: hidden;
+    display: flex;
 }
 
 /* Inicio do Header */
@@ -379,11 +380,11 @@ main {
 }
 
 
-
 #gallery-title {
     padding-top: 60px;
     display: flex;
     height: 15vh;
+    margin-bottom: 80px;
     justify-content: center;
     align-items: center;
 }
@@ -416,6 +417,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    
 }
 
 .card-photo {
@@ -424,35 +426,24 @@ main {
 }
 
 .card-photo1, .card-photo2, .card-photo3 {
-    background-image: url(../assets/imgs/foods/Spaghetti-alla-Carbonara.jpg);
     width: 440px;
     height: 440px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.478);
+    border-radius: 25px;
     
-}
-
-.card-photo2 {
-    background-image: url(../assets/imgs/foods/Gnocchi\ al\ Pesto\ Genovese.jpg);
-    background-position: center bottom;
-}
-
-.card-photo3 {
-    background-image: url(../assets/imgs/foods/Lasagna\ alla\ Napoletana.jpg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.478);
 }
 
 .texto {
     display: flex;
-    transform: translateY(-15px);
+    transform: translateY(-97%);
     width: 440px;
-    overflow-y: hidden;
     height: 440px;
     opacity: 0;
     transition: all 0.45s ease;
-    border-radius: 4px;
+    border-radius: 25px;
     color: white;
     font-family: 'montserrat';
     font-weight: 400;
@@ -460,13 +451,47 @@ main {
     justify-content: center;
     font-size: 1.5em;
     text-decoration: underline;
-    
 }
 
 .texto:hover {
-    
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(-100%);
     background-color: rgba(0, 0, 0, 0.726);
     
+}
+
+.slider {
+    height: 30rem;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.slide img {
+    object-fit: cover;
+    width: 440px;
+    height: 440px;
+    border-radius: 25px;
+    object-fit: cover;
+    object-position: center bottom;
+    margin: 0 2rem;
+}
+
+.right {
+    margin-right: 40px;
+}
+
+.slide {
+    transition: all 1s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn {
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: #888;
+    cursor: pointer;
 }
