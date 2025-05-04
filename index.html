@@ -246,10 +246,57 @@
         </section>
 
         <section id="reserve">
-            <div class="title">
+            <div class="title title-reserve">
                 <p>
                     Reserve uma mesa
                 </p>
+            </div>
+            <div id="reserve-form">
+                <form>
+                    <div id="form-left">
+                        <label for="inName">Nome</label><br>
+                        <input type="text" id="inName" placeholder="Seu nome" required>
+                        <br>
+                        <label for="inNumber">Número</label> <br>
+                        <input type="number" id="inNumber" placeholder="Seu número de telefone" required>
+                        <br>
+                        <label for="inDate">Data</label> <br>
+                        <input type="date" id="inDate" required >
+                    </div>
+                    <div id="form-right">
+                        <label for="inEmail">Email</label> <br>
+                        <input type="email" placeholder="Seu email">
+                        <br>
+                        <label for="inPessoas">Número de pessoas</label> <br>
+                        <select name="pessoas" id="inPessoas">
+                            <option value="one">1 pessoa</option>
+                            <option value="two">2 pessoas</option>
+                            <option value="three">3 pessoas</option>
+                            <option value="four">4 pessoas</option>
+                            <option value="five">5 pessoas</option>
+                            <option value="six">6 pessoas</option>
+                        </select> <br>
+                        <label for="inTime">Hora:</label> <br>
+                        <select name="time" id="inTime">
+                            <option value="1">17:00</option>
+                            <option value="2">17:30</option>
+                            <option value="3">18:00</option>
+                            <option value="4">18:30</option>
+                            <option value="5">19:00</option>
+                            <option value="6">20:00</option>
+                            <option value="7">20:30</option>
+                            <option value="8">21:00</option>
+                            <option value="9">21:30</option>
+                        </select>
+                        
+                    </div>
+                    <label for="inObs">
+                        Observação:
+                    </label> <br>
+                    <textarea name="obs" id="inObs" rows="5" cols="85" placeholder="Alguma observação? (Opcional)">
+                    </textarea>
+                    <button>Reservar</button>
+                </form>
             </div>
             
         </section>
