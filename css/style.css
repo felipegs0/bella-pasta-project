@@ -220,7 +220,7 @@ main {
 
 #menu {
     width: 100vw;
-    height: 82vh;
+    height: 75vh;
     background-color: #fcdbc7;
 }
 
@@ -360,6 +360,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 13.5px;
+    margin-bottom: 90px;
 }
 
 .card-photo {
@@ -370,7 +371,7 @@ main {
 .texto {
     display: flex;
     transform: translateY(-97%);
-    width: 440px;
+    width: 500px;
     height: 440px;
     opacity: 0;
     transition: all 0.45s ease;
@@ -408,7 +409,7 @@ main {
 
 .slide img {
     object-fit: cover;
-    width: 440px;
+    width: 500px;
     height: 440px;
     border-radius: 25px;
     object-fit: cover;
