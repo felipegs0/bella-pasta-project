@@ -94,7 +94,7 @@ nav ul {
 /* Seção do Parallax */
 
 .parallax {
-    background-image: url(../assets/imgs/bg/bg_parallax-blur.jpg);
+    background-image: url(../assets/imgs/bg/bg_parallax-blur2.jpg);
     width: 100vw;
     height: 85vh;
     background-repeat: no-repeat;
@@ -133,36 +133,6 @@ main {
 }
 
 
-#about-title {
-    width: 100vw;
-    margin-top: 60px;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#about-title p {
-    font-family: var(--principal-fontfamily);
-    color: var(--principal-color-text);
-    font-size: var(--titles-size);
-    font-weight: 400;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-#about-title p::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    background-color: #961717;
-    width: 10vw;
-    height: 2px;
-}
-
 #about-description {
     width: 100vw;
     height: 45vh;
@@ -174,6 +144,8 @@ main {
 #description-img img {
     width: 25em;
     height: 23em;
+    object-fit: cover;
+    object-position: center;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.178);
 }
@@ -187,7 +159,7 @@ main {
     margin-bottom: 20px;
 }
 
-#description-text .title {
+#description-text .desc-title {
     font-family: var(--principal-fontfamily);
     color: var(--principal-color-text);
     font-size: 1.9em;
@@ -252,34 +224,6 @@ main {
     background-color: #fcdbc7;
 }
 
-#menu-title {
-    padding-top: 60px;
-    display: flex;
-    height: 15vh;
-    justify-content: center;
-    align-items: center;
-}
-
-#menu-title p {
-    font-family: var(--principal-fontfamily);
-    color: var(--principal-color-text);
-    font-size: var(--titles-size);
-    font-weight: 400;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
-#menu-title p::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    background-color: #961717;
-    width: 10vw;
-    height: 2px;
-}
 
 #buttons {
     display: flex;
@@ -379,17 +323,15 @@ main {
     background-color: #5a3f3ad2;   
 }
 
-
-#gallery-title {
+.title {
     padding-top: 60px;
     display: flex;
-    height: 15vh;
-    margin-bottom: 80px;
+    margin-bottom: 55px;
     justify-content: center;
     align-items: center;
 }
 
-#gallery-title p {
+.title p {
     font-family: var(--principal-fontfamily);
     color: var(--principal-color-text);
     font-size: var(--titles-size);
@@ -399,7 +341,7 @@ main {
     padding-bottom: 10px;
 }
 
-#gallery-title p::after {
+.title p::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -409,6 +351,7 @@ main {
     width: 10vw;
     height: 2px;
 }
+
 
 #gallery-photos {
     width: 100vw;
@@ -506,6 +449,11 @@ main {
 }
 
 .panna img {
+    object-position: center;
+    object-fit: cover;
+}
+
+.carbonara img {
     object-position: center;
     object-fit: cover;
 }
