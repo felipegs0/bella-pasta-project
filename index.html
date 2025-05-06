@@ -261,14 +261,14 @@
                         <input type="number" id="inNumber" placeholder="Seu número de telefone" required>
                         <br>
                         <label for="inDate">Data</label> <br>
-                        <input type="date" id="inDate" required >
+                        <input type="date" id="inDate" required>
                     </div>
                     <div id="form-right">
                         <label for="inEmail">Email</label> <br>
                         <input type="email" placeholder="Seu email" required id="inEmail">
                         <br>
                         <label for="inPessoas">Número de pessoas</label> <br>
-                        <select name="pessoas" id="inPessoas">
+                        <select name="pessoas" id="inPessoas" required>
                             <option value="1 pessoa">1 pessoa</option>
                             <option value="2 pessoas">2 pessoas</option>
                             <option value="3 pessoas">3 pessoas</option>
@@ -277,7 +277,7 @@
                             <option value="6 pessoas">6 pessoas</option>
                         </select> <br>
                         <label for="inTime" id="lbTime" class="ocult">Hora:</label> <br>
-                        <select name="time" id="inTime" class="ocult">
+                        <select name="time" id="inTime" class="ocult" required>
                             <option value="17:00">17:00</option>
                             <option value="17:30">17:30</option>
                             <option value="18:00">18:00</option>
@@ -295,13 +295,16 @@
                         Observação:
                     </label> <br>
                     <textarea name="obs" id="inObs" rows="5" cols="85" placeholder="Alguma observação? (Opcional)"></textarea>
-                    <button id="btReservar">Reservar</button>
+                    <input type="submit" placeholder="Reservar" id="btReservar">
                 </form>
             </div>
             
         </section>
     </main>
 
+<div id="pop_up" class="oculto"> 
+
+</div>
     <script src="js/script.js"></script>
 </body>
 </html>

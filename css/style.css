@@ -553,7 +553,7 @@ main {
     font-family: 'Montserrat';
 }
 
-#reserve-form button {
+#reserve-form #btReservar {
     width: 100%;
     height: 50px;
     background-color: #b11010;
@@ -573,4 +573,37 @@ main {
 
 .ocult {
     visibility: hidden;
+}
+
+#pop_up {
+    opacity: 0;
+    width: 430px;
+    height: 115px;
+    background-color: rgb(124, 6, 6);
+    position: fixed;
+    transform: translate(1430px, 800px);
+    padding: 12px;
+    border-radius: 12px;
+    border: 3px solid rgb(112, 1, 1);
+    cursor: default;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#pop_up.visivel {
+    opacity: 1;
+}
+
+#pop_up p {
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: 'montserrat';
+
+}
+
+.oculto {
+    display: none;
 }

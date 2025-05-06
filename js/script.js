@@ -88,23 +88,53 @@ right.addEventListener("click", nextSlide)
 
 const frm = document.querySelector("form")
 const btReservar = document.getElementById("btReservar")
+const popUp = document.getElementById("pop_up")
 
-btReservar.addEventListener("click", (e) => {
+frm.addEventListener("submit", (e) => {
     e.preventDefault()
 
-    let nameClient = frm.inName.value;
-    let time = frm.inTime.value;
+    const nameClient = frm.inName.value;
+    const time = frm.inTime.value;
     const inDate = frm.inDate.value;
     const date = new Date(inDate)
+    const inObs = frm.inObs.value;
+    const inNumber = frm.inNumber.value;
 
-    console.log(`Obrigado pela preferencia ${nameClient}! Sua reserva foi agendada para ${date.getDate() + 1}/0${date.getMonth()} às ${time}.`)
+    let p = document.createElement('p')
+    p.innerText = `Obrigado pela preferencia ${nameClient}!
+    Sua reserva foi agendada para ${date.getDate() + 1}/0${date.getMonth()} às ${time}.`
+    popUp.appendChild(p)
+
+    mostrarPopUp(p)
+    limparForm()
 })
 
-const inputDate = document.getElementById("inDate")
+function mostrarPopUp(p) {
+    popUp.classList.remove("oculto");
+    setTimeout(() => {
+        popUp.classList.add("visivel");
+    }, 10)
 
+    setTimeout(() => {
+        popUp.classList.remove("visivel");
+        setTimeout(() => {
+            popUp.classList.add("oculto");
+            p.innerText = "";
+        }, 500)
+    }, 4000)
+}
+
+function limparForm() {
+    frm.inName.value = ""
+    frm.inEmail.value = ""
+    frm.inNumber.value = ""
+    document.getElementById("inObs").value = "";
+}
+
+const inputDate = document.getElementById("inDate")
 inputDate.addEventListener("change", (e) => {
     e.preventDefault()
-    
+
     const lbTime = document.getElementById("lbTime")
     const inTime = document.getElementById("inTime")
 
@@ -117,9 +147,14 @@ inputDate.addEventListener("change", (e) => {
     const diaDaSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"];
     const nomeDoDia = diaDaSemana[dataEspecifica.getDay()];
     if (nomeDoDia == "Segunda" || nomeDoDia == "Terça") {
-        alert("Não trabalhamos nas segundas e terças!!")
         lbTime.classList.add("ocult")
         inTime.classList.add("ocult")
+
+        const p = document.createElement("p")
+        p.innerText = `Não abrimos nas segundas e terças! 
+        Por favor, escolha outro dia!`
+        popUp.appendChild(p)
+        mostrarPopUp(p)
     } else {
         lbTime.classList.remove("ocult")
         inTime.classList.remove("ocult")
