@@ -92,12 +92,36 @@ const btReservar = document.getElementById("btReservar")
 btReservar.addEventListener("click", (e) => {
     e.preventDefault()
 
-    nameClient = frm.inName.value;
-    tel = frm.inNumber.value;
-    date = frm.inDate.value;
-    email = frm.inEmail.value;
-    numClient = frm.inPessoas.value;
-    time = frm.inTime.value;
+    let nameClient = frm.inName.value;
+    let time = frm.inTime.value;
+    const inDate = frm.inDate.value;
+    const date = new Date(inDate)
 
-    console.log(nameClient, tel, date, email, numClient, time)
+    console.log(`Obrigado pela preferencia ${nameClient}! Sua reserva foi agendada para ${date.getDate() + 1}/0${date.getMonth()} às ${time}.`)
+})
+
+const inputDate = document.getElementById("inDate")
+
+inputDate.addEventListener("change", (e) => {
+    e.preventDefault()
+    
+    const lbTime = document.getElementById("lbTime")
+    const inTime = document.getElementById("inTime")
+
+    const dateParts = inputDate.value.split("-");
+    const dataEspecifica = new Date(
+        Number(dateParts[0]),
+        Number(dateParts[1]) - 1,
+        Number(dateParts[2])
+    )
+    const diaDaSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"];
+    const nomeDoDia = diaDaSemana[dataEspecifica.getDay()];
+    if (nomeDoDia == "Segunda" || nomeDoDia == "Terça") {
+        alert("Não trabalhamos nas segundas e terças!!")
+        lbTime.classList.add("ocult")
+        inTime.classList.add("ocult")
+    } else {
+        lbTime.classList.remove("ocult")
+        inTime.classList.remove("ocult")
+    }
 })

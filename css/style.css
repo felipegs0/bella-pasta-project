@@ -570,3 +570,7 @@ main {
 #reserve-form button:hover {
     background-color: #860d0d;
 }
+
+.ocult {
+    visibility: hidden;
+}
