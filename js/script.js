@@ -83,3 +83,21 @@ window.addEventListener("load", () => {
 
 left.addEventListener("click", prevSlide)
 right.addEventListener("click", nextSlide)
+
+
+
+const frm = document.querySelector("form")
+const btReservar = document.getElementById("btReservar")
+
+btReservar.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    nameClient = frm.inName.value;
+    tel = frm.inNumber.value;
+    date = frm.inDate.value;
+    email = frm.inEmail.value;
+    numClient = frm.inPessoas.value;
+    time = frm.inTime.value;
+
+    console.log(nameClient, tel, date, email, numClient, time)
+})

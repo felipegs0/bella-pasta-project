@@ -265,28 +265,29 @@
                     </div>
                     <div id="form-right">
                         <label for="inEmail">Email</label> <br>
-                        <input type="email" placeholder="Seu email">
+                        <input type="email" placeholder="Seu email" required id="inEmail">
                         <br>
                         <label for="inPessoas">Número de pessoas</label> <br>
                         <select name="pessoas" id="inPessoas">
-                            <option value="one">1 pessoa</option>
-                            <option value="two">2 pessoas</option>
-                            <option value="three">3 pessoas</option>
-                            <option value="four">4 pessoas</option>
-                            <option value="five">5 pessoas</option>
-                            <option value="six">6 pessoas</option>
+                            <option value="1 pessoa">1 pessoa</option>
+                            <option value="2 pessoas">2 pessoas</option>
+                            <option value="3 pessoas">3 pessoas</option>
+                            <option value="4 pessoas">4 pessoas</option>
+                            <option value="5 pessoas">5 pessoas</option>
+                            <option value="6 pessoas">6 pessoas</option>
                         </select> <br>
                         <label for="inTime">Hora:</label> <br>
                         <select name="time" id="inTime">
-                            <option value="1">17:00</option>
-                            <option value="2">17:30</option>
-                            <option value="3">18:00</option>
-                            <option value="4">18:30</option>
-                            <option value="5">19:00</option>
-                            <option value="6">20:00</option>
-                            <option value="7">20:30</option>
-                            <option value="8">21:00</option>
-                            <option value="9">21:30</option>
+                            <option value="17:00">17:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="18:00">18:00</option>
+                            <option value="18:30">18:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="19:30">19:30</option>
+                            <option value="20:00">20:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:30">21:30</option>
                         </select>
                         
                     </div>
@@ -294,7 +295,7 @@
                         Observação:
                     </label> <br>
                     <textarea name="obs" id="inObs" rows="5" cols="85" placeholder="Alguma observação? (Opcional)"></textarea>
-                    <button>Reservar</button>
+                    <button id="btReservar">Reservar</button>
                 </form>
             </div>
             
