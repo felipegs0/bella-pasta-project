@@ -20,7 +20,6 @@ body {
     height: 100vh;
     background-color: var(--principal-backgroundColor);
     overflow-x: hidden;
-    display: flex;
 }
 
 /* Inicio do Header */
@@ -123,7 +122,6 @@ nav ul {
 /* Inicio do Main */
 
 main {
-    padding-bottom: 1000px;
     background-color: var(--principal-backgroundColor);
 }
 
@@ -455,10 +453,6 @@ main {
     padding-bottom: 70px;
 }
 
-.div-reserve {
-    
-}
-
 .title-reserve p {
     font-weight: 500;
     color: white;
@@ -587,4 +581,23 @@ main {
 
 .oculto {
     display: none;
+}
+
+footer {
+    height: 20vh;
+    width: 100vw;
+    background-color: #c49675;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+footer p, h2 {
+    color: rgba(255, 255, 255, 0.829);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6)
+}
+
+#left-footer {
+    width: 300px;
 }
