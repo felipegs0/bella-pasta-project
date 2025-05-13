@@ -93,21 +93,24 @@ const popUp = document.getElementById("pop_up")
 frm.addEventListener("submit", (e) => {
     e.preventDefault()
 
+    getInfo()
+    limparForm()
+})
+
+function getInfo() {
     const nameClient = frm.inName.value;
     const time = frm.inTime.value;
     const inDate = frm.inDate.value;
     const date = new Date(inDate)
     const inObs = frm.inObs.value;
     const inNumber = frm.inNumber.value;
-
+    
     let p = document.createElement('p')
-    p.innerText = `Obrigado pela preferencia ${nameClient}!
-    Sua reserva foi agendada para ${date.getDate() + 1}/0${date.getMonth()} às ${time}.`
+    p.innerText = `Obrigado pela preferencia, ${nameClient}.
+    Sua reserva foi devidamente agendada!`
     popUp.appendChild(p)
-
     mostrarPopUp(p)
-    limparForm()
-})
+}
 
 function mostrarPopUp(p) {
     popUp.classList.remove("oculto");
@@ -121,7 +124,7 @@ function mostrarPopUp(p) {
             popUp.classList.add("oculto");
             p.innerText = "";
         }, 500)
-    }, 4000)
+    }, 1500)
 }
 
 function limparForm() {
