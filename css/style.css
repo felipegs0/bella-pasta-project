@@ -220,7 +220,7 @@ main {
 
 #menu {
     width: 100vw;
-    height: 75vh;
+    height: 82vh;
     background-color: #fcdbc7;
 }
 
@@ -297,26 +297,6 @@ main {
     color: rgba(49, 109, 49, 0.795);
     font-family: 'montserrat';
     font-size: 16px;
-}
-
-#complete-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 18vh;
-
-}
-
-#complete-menu button {
-    background-color: #5a3f3a;
-    padding: 18px 34px;
-    color: white;
-    font-family: 'montserrat';
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 15px;
-    border: none;
 }
 
 #complete-menu button:hover {
