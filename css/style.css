@@ -137,6 +137,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 110px;
 }
 
 #description-img img {
@@ -149,7 +150,6 @@ main {
 }
 
 #description-text {
-    margin-left: 100px;
     width: 40%;
 }
 
@@ -660,4 +660,84 @@ footer img {
 
 #all-rights p {
     color: rgba(255, 255, 255, 0.788);
+}
+
+/* Responsividade para celulares */
+
+@media (max-width: 480px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #about {
+        height: 77vh;
+    }
+
+    .parallax {
+    background-image: url(../assets/imgs/bg/bg_parallax-blur-cellphone.jpg);
+    width: 100vw;
+    height: 85vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 75px;
+    }
+
+    .parallax img {
+        width: 250px;
+    }
+
+    .title p {
+        font-size: 45px;
+        margin-bottom: 50px;
+    }
+
+    #about-description {
+        gap: 20px;
+    }
+
+    #description-img img {
+        width: 200px;
+        height: 200px;
+        
+    }
+
+    #description-text p {
+        width: 210px;
+    }
+
+    #description-text .desc-title {
+        font-size: 23px;
+    }
+
+    #description-text .text, #description-text .conclusion {
+        font-size: 18px;
+    }
+
+    #description-about-chef, #description-img-chef {
+        display: none;
+    }
+    
+    .menu-title {
+        margin-bottom: 0px;
+    }
+
+    #ent-content, #pas-content, #sob-content {
+        
+    }
+
+    .meat {
+    width: 210px;
+    height: 150px;
+    border-radius: 8px;
+    padding: 30px;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.178);
+}
 }
